@@ -1,5 +1,11 @@
 package axisimski.colazconj;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.res.Resources;
+
+import static android.provider.Settings.Global.getString;
+
 /**
  * Created by Alex on 2/12/2018.
  */
@@ -16,9 +22,14 @@ public class withSteps {
     long max=z;
     int maxStep=0;
 
+
+
+
     protected  void execute(){
+
+
         if(MainActivity.input.getText().toString().equals("")) {
-            MainActivity.input.setError("Please enter a whole positive number between 1 and 100,000,000,000");
+            MainActivity.input.setError("1 ≤ Z ≤ 100,000,000,000");
             return;
         }
 
@@ -27,7 +38,7 @@ public class withSteps {
             z=Long.valueOf(MainActivity.input.getText().toString());
 
             if(z<1||z>comp){
-                MainActivity.input.setError("Please enter a whole positive number between 1 and 100,000,000,000");
+                MainActivity.input.setError("1 ≤ Z ≤ 100,000,000,000");
                 return;
             }
             else if(z==1){
@@ -53,12 +64,12 @@ public class withSteps {
                         z++;
                     }
 
-                    Sequence.append("Step " + Integer.toString(i) + ": =  " + Long.toString(z) + "\n");
+                    Sequence.append(Integer.toString(i) + ")  " + Long.toString(z) + "\n");
 
                 } while (z != 1);
 
-                maxSequence.append("Total steps: "+Integer.toString(i)+"\nMax value: " +
-                        Long.toString(max)+"\n"+"at step number "+Integer.toString(maxStep)+"\n\n"+Sequence);
+                maxSequence.append(MainActivity.TotalSteps+" "+Integer.toString(i)+"\n"+MainActivity.MaxValue+" "+
+                        Long.toString(max)+"\n"+MainActivity.AtStep+" "+Integer.toString(maxStep)+"\n\n"+Sequence);
 
                 MainActivity.output.setText(maxSequence);
             }

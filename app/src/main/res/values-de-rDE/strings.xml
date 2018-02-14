@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColazConj</string>
+    <string name="generate_sequence">Sequenz</string>
+    <string name="show_steps">Zeige Schritte</string>
+    <string name="link_to_source_code">Link zum Quellcode</string>
+    <string name="total_steps">Gesamte Schritte</string>
+    <string name="max_value">Maximum</string>
+    <string name="at_step">bei Schritt</string>
+    <string name="one_in_0_steps">1 in 0 Schritten</string>
+    <string name="_1">+1</string>
+</resources>

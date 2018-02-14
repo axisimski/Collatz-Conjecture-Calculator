@@ -24,13 +24,18 @@ public class MainActivity extends AppCompatActivity {
     static Switch showSteps;
     Button addOne;
 
+    static String MaxValue, TotalSteps, AtStep;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
+        //-------------------------------------------------------------------------------------------
+        TotalSteps=getResources().getString(R.string.total_steps);
+        AtStep=getResources().getString(R.string.at_step);
+        MaxValue=getResources().getString(R.string.max_value);
         //--------------------------------------------------------------------------------------------
         showSteps=(Switch)findViewById(R.id.showSteps);
         exec=(Button)findViewById(R.id.button);

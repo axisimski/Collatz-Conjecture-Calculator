@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">ColazConj</string>
     <string name="generate_sequence">Generate Sequence</string>
-    <string name="show_steps">Show steps  </string>
+    <string name="show_steps">Show steps</string>
+    <string name="total_steps">Total Steps</string>
+    <string name="max_value">Max Value: </string>
+    <string name="at_step">At step number</string>
+    <string name="one_in_0_steps">You've reached 1 in zero steps</string>
+        <string name="_1">+1</string>
     <string name="link_to_source_code">Link to Source Code</string>
-    <string name="_1">+1</string>
 
 </resources>

@@ -18,7 +18,7 @@ public class NoSteps {
 
     protected void execute(){
         if(MainActivity.input.getText().toString().equals("")) {
-          MainActivity.input.setError("Please enter a whole positive number between 1 and 100,000,000,000");
+          MainActivity.input.setError("1 ≤ Z ≤ 100,000,000,000");
         }
 
         else {
@@ -26,7 +26,7 @@ public class NoSteps {
         z=Long.valueOf(MainActivity.input.getText().toString());
 
         if(z<1||z>comp){
-            MainActivity.input.setError("Please enter a whole positive number between 1 and 100,000,000,000");
+            MainActivity.input.setError("1 ≤ Z ≤ 100,000,000,000");
         }
         else if(z==1){
             Sequence.append("You've reached 1 in 0 steps");
@@ -55,8 +55,8 @@ public class NoSteps {
 
             } while (z != 1);
 
-            maxSequence.append("Total steps: "+Integer.toString(i)+"\nMax value: " +
-                    Long.toString(max)+"\n"+"at step number "+Integer.toString(maxStep)+"\n\n"+Sequence);
+            maxSequence.append(MainActivity.TotalSteps+" "+Integer.toString(i)+"\n"+MainActivity.MaxValue+" "+
+                    Long.toString(max)+"\n"+MainActivity.AtStep+" "+Integer.toString(maxStep)+"\n\n"+Sequence);
 
             MainActivity.output.setText(maxSequence);
         }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ColazConj</string>
+    <string name="generate_sequence">"Зареди "</string>
+    <string name="show_steps">Покажи стъпките</string>
+    <string name="link_to_source_code">Линк към кода на приложението</string>
+    <string name="total_steps">Общто стъпки:</string>
+    <string name="max_value">Максимана стойност</string>
+    <string name="at_step">на стъпка номер</string>
+    <string name="one_in_0_steps">1 с 0 стъпки</string>
+    <string name="_1">+1</string>
+</resources>
