@@ -72,7 +72,7 @@ public class SettingsActivity extends AppCompatActivity {
                 Intent intent = new Intent();
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.sciencealert.com/which-us-state-is-closest-to-africa"));
+                intent.setData(Uri.parse("https://github.com/axisimski/Collatz-Conjucture-Calculator"));
                 startActivity(intent);
             }
         });

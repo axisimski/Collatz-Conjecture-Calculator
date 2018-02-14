@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">ColazConj</string>
     <string name="generate_sequence">Generate Sequence</string>
-    <string name="show_steps">Show steps </string>
+    <string name="show_steps">Show steps  </string>
+    <string name="link_to_source_code">Link to Source Code</string>
+    <string name="_1">+1</string>
 
 </resources>

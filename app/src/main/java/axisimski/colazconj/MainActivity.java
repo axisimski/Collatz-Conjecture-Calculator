@@ -22,24 +22,26 @@ public class MainActivity extends AppCompatActivity {
     static  EditText input;
     static TextView output;
     static Switch showSteps;
-    Switch addOne;
+    Button addOne;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //--------------------------------------------------------------------------------------------
         showSteps=(Switch)findViewById(R.id.showSteps);
         exec=(Button)findViewById(R.id.button);
         settings=(Button)findViewById(R.id.settingsButton);
-        addOne=(Switch)findViewById(R.id.addOne);
+        addOne=(Button) findViewById(R.id.addOne);
         input=(EditText)findViewById(R.id.input);
         output=(TextView)findViewById(R.id.output);
         output.setMovementMethod(ScrollingMovementMethod.getInstance());
         output.setTextIsSelectable(true);
 
-        //Hide the main screen switch statment.
+        //Hide the main screen switch statement.
         showSteps.setVisibility(View.GONE);
         //--------------------------------------------------------------------------------------------
 
@@ -55,7 +57,38 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences SharedPref=getSharedPreferences("userInput", Context.MODE_PRIVATE);
         Boolean FC=SharedPref.getBoolean("showSteps", false);
         showSteps.setChecked(FC);
+
+
+        addOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                long num;
+
+                if(input.getText().toString().isEmpty()){
+                    num=1;
+                }
+                else{
+                    num=Long.valueOf (input.getText().toString());
+                }
+                num++;
+                input.setText(Long.toString(num));
+
+                NoSteps ns=new NoSteps();
+                withSteps ws =new withSteps();
+
+                if(showSteps.isChecked()){
+                    ws.execute();
+                }
+
+                else{
+                    ns.execute();
+                }
+
+            }
+        });
     }
+//==================================================================================================
 
     public void execute(View v){
 
@@ -70,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             ns1.execute();
         }
 
-
+//==================================================================================================
 
         showSteps.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -90,33 +123,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        addOne.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                long num=Long.valueOf (input.getText().toString());
-
-                if(input.getText().toString().isEmpty()){
-                    num=1;
-                }
-                num++;
-                input.setText(Long.toString(num));
-
-                NoSteps ns=new NoSteps();
-                withSteps ws =new withSteps();
-
-                if(showSteps.isChecked()){
-                    ws.execute();
-                }
-
-                else{
-                    ns.execute();
-                }
-
-            }
-        });
-
+//==================================================================================================
 
     }
 
