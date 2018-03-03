@@ -64,12 +64,12 @@ public class withSteps {
                         z++;
                     }
 
-                    Sequence.append(Integer.toString(i) + ")  " + Long.toString(z) + "\n");
+                    Sequence.append("  "+Integer.toString(i) + ")  " + Long.toString(z) + "\n");
 
                 } while (z != 1);
 
-                maxSequence.append(MainActivity.TotalSteps+" "+Integer.toString(i)+"\n"+MainActivity.MaxValue+" "+
-                        Long.toString(max)+"\n"+MainActivity.AtStep+" "+Integer.toString(maxStep)+"\n\n"+Sequence);
+                maxSequence.append("  "+MainActivity.TotalSteps+" "+Integer.toString(i)+"\n"+"  "+MainActivity.MaxValue+" "+
+                        Long.toString(max)+"\n"+"  "+MainActivity.AtStep+" "+Integer.toString(maxStep)+"\n\n"+Sequence);
 
                 MainActivity.output.setText(maxSequence);
             }
